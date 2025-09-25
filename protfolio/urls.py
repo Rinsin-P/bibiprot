@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('', include('protapp.urls')),
+    # Favicon redirect
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'assets/img/favicon.png')),
 ]
 
 # Serve static files in development and production
