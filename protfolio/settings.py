@@ -119,17 +119,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# For development
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'protapp/static'),
 ]
+
+# For production (Vercel)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Disable WhiteNoise static file compression for now
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# WhiteNoise configuration
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
