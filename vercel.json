@@ -24,6 +24,10 @@
       "dest": "/static/favicon.png"
     },
     {
+      "src": "/favicon.png",
+      "dest": "/static/favicon.png"
+    },
+    {
       "src": "/(.*)",
       "dest": "protfolio/wsgi.py"
     }
