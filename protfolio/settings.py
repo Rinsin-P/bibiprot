@@ -128,8 +128,8 @@ STATICFILES_DIRS = [
 # For production (Vercel)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Disable WhiteNoise static file compression for now
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Use basic static files storage for Vercel
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Media files
 MEDIA_URL = '/media/'
